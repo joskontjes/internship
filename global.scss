@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+$background-color: #313131;
+$letter-color: #fff;
+$body-color: #eee;
+$border-color: #b56c00;
+$footer-color: #8f9296;
+$skillbackground-color: #131313;
+$value-color: #E89A00;
+$title-color: #c9c9c9;
+$footerbackground-color: #292c2f;
+
+body {
+  background-color: $footerbackground-color;
+  font-family: 'Roboto', sans-serif;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/*wrapper*/
+.wrapper {
+  margin: 0 auto; /*Top Right Bottom Left*/
+  max-width: 1000px;
+  padding: 0 20px;
+}
+
+/*Nav-bar*/
+.mainNav {
+  background-color: $background-color;
+}
+
+ul {
+  padding-left: 0px;
+  li {
+    list-style: none; /*no dot in front of the links*/
+    a {
+     text-decoration: none; /*no underline under the links*/
+     font-size: 17px;
+     color: $letter-color;
+     padding: 0 15px;
+
+     &:hover {
+      color: orange;
+      text-decoration: none;
+     }
+   }
+  }
+}
+/*banner*/
+.banner {
+  background-image: url("img/csgo_screenshot7.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+/*styling text inside banner*/
+h2 {
+  color: $letter-color;
+  padding-top: 40px;
+  font-size: 54px;
+  font-weight: 900;
+
+  .orange {
+    color: orange;
+  }
+}
+
+p {
+  color: $letter-color;
+  padding-top: 15px;
+  font-size: 20px;
+
+  .header {
+    width: 320px;
+    line-height: 35px;
+    color: $value-color;
+  }
+}
+.center {
+  height: auto;
+  line-height: normal;
+}
+/*Boxes styling and placement*/
+.box {
+  height: auto;
+  margin-bottom: 10px;
+  text-align: center;
+  border-color: blue;
+  line-height: normal;
+  color: white;
+
+  a {
+    display: block;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+.skill {
+  margin: 0 auto;
+
+  h2{
+    color: $letter-color;
+    font-size: 24px;
+    padding-top: 25px;
+  }
+
+  p{
+    color: $letter-color;
+    font-size: 16px;
+  }
+}
+.img-graph {
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.value {
+  font-size: 40px;
+  color: $value-color;
+}
+.title {
+font-size: 20px;
+color: $title-color;
+}
+
+.center-paragraph {
+  text-align: center;
+  color: $value-color;
+}
+/*Buttons*/
+.playNow {
+  display: inline-block;
+  color: white;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  background-color: $value-color;
+  padding: 20px 40px;
+  text-align: center;
+  text-decoration: none;
+  margin: 20px 0;
+}
+.analytics {
+    background-color: $background-color;
+    padding-top: 5px;
+}
+.skillbackground {
+  background-color: $skillbackground-color;
+}
+/*Footer*/
+.footer{
+	background-color: $footerbackground-color;
+	text-align: center;
+	font-weight: bold;
+  font-size: 16px;
+  padding-top: 20px;
+
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .wrap {
+    flex-basis: 200px;
+    flex-grow: 1;
+  }
+
+  h3{
+  	color:  $letter-color;
+  	font-size: 20px;
+  	margin: 0;
+  }
+}
+.footer-monitorus {
+  margin: 0 auto;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.footer-monitorus{
+  color:  $footer-color;
+  font-size: 14px;
+  margin: 0;
+}
+/* responsive start */
+@media (min-width: 400px) {
+
+  .mainNav {
+    height: 100%;
+  }
+
+  .center {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+  }
+
+  .box {
+    flex-basis: 200px;
+    flex-grow: 1;
+  }
+
+
+}
+
+@media (min-width: 700px) {
+
+  .box {
+    text-align: center;
+    width: 100%;
+  }
+
+  .wrapper {
+    margin: 0 auto; /*Top Right Bottom Left*/
+  }
+
+}
+@media (min-width: 768px) {
+
+  .mainNav {
+    height: 60px;
+  }
+
+  .header {
+    padding-top: 0px;
+    line-height: 60px;
+    width: 100%;
+  }
+
+  .img-graph {
+    width: 45%;
+  }
+
+  .skill {
+    padding-right: 15px;
+  }
+
+  .wrapper:nth-of-type(2) .skill {
+    order: 2;
+    padding-left: 15px;
+    padding-right: 0;
+  }
+
+/*Works untill here*/
+
+  .wrapper-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+  }
+}
